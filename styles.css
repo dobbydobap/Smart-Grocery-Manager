@@ -1,28 +1,29 @@
+/* Updated Color Palette */
 :root {
-  --navy: #2F4156;
-  --teal: #567C9D;
-  --sky-blue: #CBD9E6;
-  --beige: #F5EEEB;
+  --deep-purple: #46467A;
+  --medium-purple: #776C9C;
+  --light-purple: #E0DFFD;
+  --golden-yellow: #F1C732;
+  --soft-pink: #F8D8C3;
   --white: #FFFFFF;
-  --font-heading: 'Playfair Display', serif;
+  --font-heading: 'Poppins', sans-serif;
   --font-body: 'Lato', sans-serif;
-  --font-special: 'Poppins', sans-serif;
 }
 
+/* Global Styles */
 body {
   font-family: var(--font-body);
-  background-color: var(--beige);
-  color: var(--navy);
+  background-color: var(--soft-pink);
+  color: var(--deep-purple);
   transition: background 0.3s ease-in-out;
 }
 
 /* Navigation Bar */
 .navbar {
-  background-color: var(--navy) !important;
-  font-family: var(--font-special);
+  background-color: var(--deep-purple) !important;
+  font-family: var(--font-heading);
   padding: 15px 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
 }
 .navbar-brand {
   font-size: 1.5rem;
@@ -31,14 +32,14 @@ body {
   transition: color 0.3s ease;
 }
 .navbar-brand:hover {
-  color: var(--sky-blue);
+  color: var(--golden-yellow);
 }
 .nav-link {
   color: var(--white) !important;
   transition: color 0.3s;
 }
 .nav-link:hover {
-  color: var(--sky-blue) !important;
+  color: var(--golden-yellow) !important;
 }
 
 /* Sections */
@@ -53,28 +54,43 @@ section:hover {
 /* Cards */
 .card {
   background: var(--white);
-  border-radius: 12px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  border: none;
 }
 .card:hover {
-  transform: scale(1.02);
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
 }
 .card-title {
   font-family: var(--font-heading);
   font-size: 1.5rem;
+  color: var(--deep-purple);
+}
+
+/* Event Tags */
+.event-date {
+  background-color: var(--golden-yellow);
+  color: var(--deep-purple);
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
 }
 
 /* Buttons */
 .btn-primary {
-  background: var(--teal);
+  background: var(--medium-purple);
   border: none;
-  font-family: var(--font-special);
+  font-family: var(--font-heading);
   transition: all 0.3s ease;
+  border-radius: 8px;
+  padding: 10px 15px;
 }
 .btn-primary:hover {
-  background: var(--navy);
+  background: var(--deep-purple);
   transform: translateY(-2px);
 }
 
@@ -96,19 +112,20 @@ section:hover {
 
 /* Footer */
 footer {
-  background: var(--navy);
+  background: var(--deep-purple);
   color: var(--white);
   padding: 15px 0;
   text-align: center;
   font-family: var(--font-body);
 }
 
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin: 20px;
+/* Recipe Results */
+#recipe-results {
+  display: none;
+  animation: fadeInUp 0.5s ease-in-out;
 }
 
+/* Scanner UI */
 #scanner-container {
   display: none;
   position: relative;
@@ -116,38 +133,19 @@ body {
   max-width: 400px;
   margin: auto;
 }
-
 #scanner-video {
   width: 100%;
   height: auto;
-  border: 2px solid #000;
+  border: 2px solid var(--deep-purple);
 }
 
-button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-.card {
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin: 10px auto;
-  width: 80%;
-  background-color: #f9f9f9;
-}
-
+/* Badges for Gamification */
 #badge {
   font-weight: bold;
+  background: var(--golden-yellow);
+  color: var(--deep-purple);
+  padding: 5px 10px;
+  border-radius: 8px;
+  display: inline-block;
   margin-top: 10px;
 }
- #recipe-results{
-  display: none;
-} 
