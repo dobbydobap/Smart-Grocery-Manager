@@ -1,0 +1,153 @@
+:root {
+  --navy: #2F4156;
+  --teal: #567C9D;
+  --sky-blue: #CBD9E6;
+  --beige: #F5EEEB;
+  --white: #FFFFFF;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Lato', sans-serif;
+  --font-special: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--beige);
+  color: var(--navy);
+  transition: background 0.3s ease-in-out;
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: var(--navy) !important;
+  font-family: var(--font-special);
+  padding: 15px 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--white);
+  transition: color 0.3s ease;
+}
+.navbar-brand:hover {
+  color: var(--sky-blue);
+}
+.nav-link {
+  color: var(--white) !important;
+  transition: color 0.3s;
+}
+.nav-link:hover {
+  color: var(--sky-blue) !important;
+}
+
+/* Sections */
+section {
+  padding: 50px 0;
+  transition: transform 0.3s ease-in-out;
+}
+section:hover {
+  transform: translateY(-3px);
+}
+
+/* Cards */
+.card {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+.card-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--teal);
+  border: none;
+  font-family: var(--font-special);
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  background: var(--navy);
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+/* Footer */
+footer {
+  background: var(--navy);
+  color: var(--white);
+  padding: 15px 0;
+  text-align: center;
+  font-family: var(--font-body);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+
+#scanner-container {
+  display: none;
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+#scanner-video {
+  width: 100%;
+  height: auto;
+  border: 2px solid #000;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px auto;
+  width: 80%;
+  background-color: #f9f9f9;
+}
+
+#badge {
+  font-weight: bold;
+  margin-top: 10px;
+}
+ #recipe-results{
+  display: none;
+} 
